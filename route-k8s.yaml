@@ -1,0 +1,19 @@
+--- 
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata: 
+  annotations: 
+    kubernetes.io/ingress.class: addon-http-application-routing
+    nginx.ingress.kubernetes.io/proxy-body-size: 256m
+  name: pega
+spec: 
+  rules: 
+    - 
+      host: aaflabdev.bee7188e59c14cadaf1a.eastus.aksapp.io
+      http: 
+        paths: 
+          - 
+            backend: 
+              serviceName: pega-web
+              servicePort: 8080
+            path: /
