@@ -1,0 +1,12 @@
+---
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  name: tomcat9
+spec:
+  ## Host on which you can reach mentioned service.
+  #host: YOUR_WEB_NODE_DOMAIN
+  to:
+    kind: Service
+    # Name of the service associated with the route
+    name: tomcat9
