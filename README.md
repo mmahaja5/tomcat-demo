@@ -40,3 +40,5 @@ else you can use kubectl/oc commands to deploy and spin up the pods.
   --> kubectl apply -f route.yaml
   
 Your Tomcat instance is ready to test
+
+Note:- k8s route is also attached for referance.
